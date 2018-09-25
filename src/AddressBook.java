@@ -1,27 +1,28 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddressBook {
 
-	private ArrayList<BuddyInfo> buddyInfoList = new ArrayList<>();
+	private List<BuddyInfo> buddyInfoList;
 	
 	public AddressBook() {
-		
+		this.buddyInfoList = new ArrayList<BuddyInfo>();
 	}
 	
 	public void addBuddy(BuddyInfo b) {		
 		if(b != null) {
-			buddyInfoList.add(b);			
+			this.buddyInfoList.add(b);			
 		}
 	}
 	
-	public void removeBuddy(int i) {
+	public BuddyInfo removeBuddy(int i) {
 		if(i >= 0 && i < buddyInfoList.size()) {
-			buddyInfoList.remove(i);			
+			return this.buddyInfoList.remove(i);			
 		}
+		return null;
 	}
 	
 	public static void main(String[] args) {
-		
 		BuddyInfo b = new BuddyInfo("Homer", "Cawthra Road", "516 777 8790");
 		AddressBook a = new AddressBook();
 		a.addBuddy(b);
