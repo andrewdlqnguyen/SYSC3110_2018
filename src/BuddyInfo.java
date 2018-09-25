@@ -38,7 +38,7 @@ public class BuddyInfo {
 	public static void main(String[] args) {
 		BuddyInfo b = new BuddyInfo("Homa", "Jimmy Ave", "413 542 6543");
 		b.setName("Homer");
-		System.out.println("Hello " + b.getName());
+		System.out.println("Hello " + b.getName()); //Testing
 
 	}
 
